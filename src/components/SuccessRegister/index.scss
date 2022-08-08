@@ -1,0 +1,6 @@
+@use './../../scss/' as *;
+
+.success{
+	@include flex(center,center);
+	flex-direction: column;
+}

@@ -1,0 +1,115 @@
+@use './../../scss/' as *;
+
+.form__input-body{
+	position: relative;
+
+}
+
+.form__input{
+	box-sizing: border-box;
+	width: 100%;
+	max-height: 54px;
+	padding: 14px 16px;
+	line-height: $lh-body;
+	font-size: $fz-body;
+	color:#7E7E7E;
+	border: 1px solid #D0CFCF;
+	border-radius: 4px;
+	background-color: $color-bg;
+
+
+	&.dirty ~ .form__placeholder{
+		transform: translate(10px,-12px);
+		font-size: 12px;
+		padding: 0 4px;
+		background-color: $color-bg;
+	}
+}
+
+.form__placeholder{
+	position: absolute;
+	left: 0;
+	padding: 14px 16px;
+	pointer-events: none;
+	line-height: $lh-body;
+	font-size: $fz-body;
+	color: #7E7E7E;
+	transition: all 0.3s ease 0s;
+}
+
+.form__radio-label{
+	@include flex(center,flex-start);
+	position: relative;
+	padding: 0px 0px 0px 32px;
+	font-size: $fz-body;
+	cursor: pointer;
+
+	&::before{
+		content: '';
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #fefefe;
+		border: 1px solid $color-secondary;
+		border-radius: 50%;
+	}
+
+	&::after{
+		content: '';
+		position: absolute;
+		transform: scale(0);
+		width: 10px;
+		height: 10px;
+		left: 5px;
+		background-color: $color-secondary;
+		border-radius: 50%;
+		transition: transform 0.3s ease 0s;
+	}
+
+	&.active::after {
+		transform: scale(1);
+	}
+}
+
+.form__radio{
+	display: none;
+}
+
+.form__file-body{
+	display: flex;
+	width: 100%;
+}
+
+.form__file-button{
+	box-sizing: border-box;
+	padding: 14px 16px;
+	border: none;
+	border: 1px solid black;
+	font-size: $fz-body;
+	line-height: $lh-body;
+	color: $color-txt;
+	border-radius: 4px 0 0 4px;
+	width: 83px;
+	height: 54px;
+	cursor: pointer;
+}
+
+.form__div{
+	padding: 12px 16px;
+	display: inline-block;
+	flex: 1 1 100%;
+	width: 100%;
+	font-size: $fz-body;
+	line-height: $lh-body;
+	color:#7E7E7E;
+	border-radius: 0 4px 4px 0;
+	border: 1px solid #D0CFCF;
+}
+
+
+.form__file{
+	display: none;
+}

@@ -1,0 +1,38 @@
+@use './../../scss/' as *;
+
+.header{
+	@include flex(center,space-between);
+	min-height: 60px;
+ 
+	& > * ~ * {
+	  margin-left: 14px;
+	}
+ 
+	&__logo{
+	  @include flex(center,space-between);
+
+	  @include small{
+		@include flex(center,center);
+		margin: 10px 0;
+	}
+
+	}
+	&__controls{
+	  @include flex(center,space-between);
+		
+	  @include small{
+		@include flex(center,center);
+		margin: 0;
+	  }
+
+	  & button:not(:last-child){
+		 margin-right: 10px;
+	  }
+	}
+
+	@include small{
+		display: block;
+		margin: 0px 0px 10px 0px;
+	}
+
+ }

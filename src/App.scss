@@ -1,0 +1,54 @@
+@use './scss/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import 'reset-css';
+
+
+body{
+  font-family: $font-family;
+  background-color: $color-bg;
+  line-height: $lh-body;
+  color: $color-txt;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  
+
+  @include desktop{
+    max-width: $desktop-width;
+    padding: 0 60px;
+  }
+
+  // @media only screen and (max-width: 1023.98px) {
+  //   padding: 0 40px;
+  // }
+
+  @include tablet{
+    max-width: $tablet-width;
+    padding: 0 32px;
+  }
+
+  @include mobile{
+    max-width: $mobile-width;
+    padding: 0 16px;
+  }
+}
+
+.App{
+  padding-bottom: 100px;
+}
+
+.title{
+  font-size: $fz-heading;
+  line-height: $lh-heading;
+  text-align: center;
+}
+
+.mb-50{
+  margin-bottom: 50px;
+}
+
+.mb-140{
+  margin-bottom: 140px;
+}

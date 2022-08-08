@@ -1,0 +1,95 @@
+@use './../../scss/' as *;
+
+.users{
+	&__title{}
+
+	&__body{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 29px;
+		grid-row-gap: 29px;
+
+		@include desktop{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include tablet{
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 16px;
+			grid-row-gap: 16px;
+			justify-items: center;
+		}
+
+		@include mobile{
+			grid-template-columns: repeat(1, 1fr);
+			grid-row-gap: 20px;
+		}
+
+	}
+
+	&__body__item{
+		padding: 20px;
+	}
+
+	&__button{
+		@include flex(center,center)
+	}
+
+}
+
+.item-user{
+	@include flex(center,space-between);
+	flex-direction: column;
+	max-width: 330px;
+	min-width: 242px;
+	text-align: center;
+	background-color: #ffffff;
+	
+	div{
+		text-overflow: ellipsis; 
+		white-space: nowrap; 
+		overflow-x: hidden;
+	}
+
+	&__avatar{
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0px 0px 20px 0px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__name{
+		margin: 0px 0px 20px 0px;
+		width: 100%;
+	}
+
+	&__info{
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+
+
+	&__position{}
+	&__email{
+	}
+	&__phone{}
+
+	@include desktop{
+		min-width: 242px;
+	}
+
+	@include tablet{
+		width: 304px;
+	}
+
+	@include mobile{
+		width: 288px;
+		align-self: center;
+	}
+}

@@ -1,0 +1,17 @@
+@use './../../scss/' as *;
+
+.button{
+	@include flex(center,center);
+	border: none;
+	background-color: $color-primary;
+	height: 34px;
+	width: 100px;
+	border-radius: 80px;
+	cursor: pointer;
+	color: $color-txt;
+
+	&.disabled{
+		background-color:$bg-color-disabled;
+		color: $color-disabled;
+	}
+}

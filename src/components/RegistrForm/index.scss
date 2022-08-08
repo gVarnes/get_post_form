@@ -1,0 +1,38 @@
+@use './../../scss/' as *;
+
+.register{
+	&__title{}
+}
+
+.form{
+	@include flex(center,space-between);
+	flex-direction: column;
+	max-width: 380px;
+	margin: 0 auto;
+
+	@include mobile{
+		max-width: 328px;
+	}
+
+	&__information{
+		width: 100%;
+		margin: 0px 0px 43px 0px;
+		div:not(:last-child){
+			margin: 0px 0px 50px 0px;
+		}
+	}
+
+	&__list{
+		width: 100%;
+	}
+
+	&__list-title{
+		margin: 0px 0px 14px 0px;
+	}
+
+	&__list-item{
+		&:not(:last-child){
+		margin: 0px 0px 7px 0px;
+		}
+	}
+}

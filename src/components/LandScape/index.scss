@@ -1,0 +1,44 @@
+@use './../../scss/' as *;
+
+.landscape{
+	@include flex(center,center);
+	position: relative;
+	width: 100%;
+	padding: 164px 0 163px 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(./landscape.jpg);
+
+	@include tablet{
+		padding: 89px 0 88px 0;
+	}
+
+	@include mobile{
+		padding: 40px 0 71px 0;
+	}
+}
+
+.content-landscape{
+	@include flex(center,space-between);
+	position: relative;
+	max-width: 380px;
+	flex-direction: column;
+	color: #fff;
+	text-align: center;
+
+	@include mobile{
+		max-width: 328px;
+	}
+
+	&__title{
+		margin: 0px 0px 21px 0px;
+	}
+
+	&__body{
+		margin: 0px 0px 32px 0px;
+	}
+
+	&__button{}
+
+}
